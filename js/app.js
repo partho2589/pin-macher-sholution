@@ -31,3 +31,18 @@ document.getElementById('key-pad').addEventListener('click', function(event){
      calcInput.value = newNumber;
     }
 })
+
+function variFyPin(){
+   const pin = document.getElementById('display-pin').value;
+   const numbertype = document.getElementById('typed-numbers').value;
+   const successMasseg = document.getElementById('notify-success');
+   const failErro = document.getElementById('notify-fail');
+   if ( pin == numbertype ){
+    successMasseg.style.display = 'block';
+    failErro.style.display = 'none'
+   }
+   else{
+    failErro.style.display = 'block'
+    successMasseg.style.display = 'none';
+   }
+}
